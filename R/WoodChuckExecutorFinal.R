@@ -29,17 +29,17 @@ EstimateChuckingDistance <- function(wind_direction, temp, humidity, water_dista
 }
 
 PrepareModels <- function(){
-    mylogit <- readRDS(file = "./WoodChuckModel.R")
+    mylogit <- readRDS(file = "../../WoodChuckModel.R")
     preparedModels <- list("mylogit_model" = mylogit)
     
     return(preparedModels)
 }
 
 RetreiveAgeFromId <- function(chuck_id){
-    db <- dbConnect(RSQLite::SQLite(), dbname="../Database/WoodChuckLookup.db")
+    db <- dbConnect(RSQLite::SQLite(), dbname="../../../Database/WoodChuckLookup.db")
     woodchuck <- dbGetQuery(db, paste("SELECT Age FROM WoodChucks where Id=", chuck_id))
     
     return(woodchuck[["Age"]])
 }
 
-EstimateChuckingDistance(wind_direction=360, temp=80, humidity=0.059, water_distance=99, chuck_id=1)
+# EstimateChuckingDistance(wind_direction=360, temp=80, humidity=0.059, water_distance=99, chuck_id=1)
