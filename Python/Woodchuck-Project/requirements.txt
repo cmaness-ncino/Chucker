@@ -1,1 +1,3 @@
 statsmodels
+nose
+mock

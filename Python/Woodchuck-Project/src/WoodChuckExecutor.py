@@ -1,8 +1,6 @@
 from statsmodels.formula.api import glm
 import statsmodels.api as sm
 import pandas as pd
-import subprocess
-import os
 import sqlite3
 from statsmodels.genmod.generalized_linear_model import GLMResults
 
@@ -25,7 +23,7 @@ def main():
     df = pd.DataFrame(data) 
     
     print(model.predict(df.iloc[0])[0])
-    
+
 
 if __name__ == "__main__":
     main()
