@@ -43,4 +43,4 @@ RetreiveAgeFromId <- function(chuck_id){
     return(woodchuck[["Age"]])
 }
 
-EstimateChuckingDistance(wind_direction=360, temp=80, humidity=0.059, water_distance=99, chuck_id=1)
+# EstimateChuckingDistance(wind_direction=360, temp=80, humidity=0.059, water_distance=99, chuck_id=1)
